@@ -1,0 +1,21 @@
+note left of selain: 0.4: uusi muistiinpano
+
+note over selain: selain lähettää POSTin kun uusi note tallennetaan
+
+selain->palvelin: HTTP POST new_note
+palvelin-->selain: palvelin vastaa 302 statuskoodin ja ilmottaa että new_note löytyy nyt urlista /notes
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+palvelin-->selain: palauttaa html:n
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin-->selain: palvelin vastaa lähettämällä css:n
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+palvelin-->selain: palvelin vastaa lähettämällä js:n
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin-->selain: palauttaa json datan
+
+
+note over selain: tämän jälkeen sivu renderöidään käyttäjän nähtäville

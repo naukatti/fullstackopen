@@ -1,0 +1,11 @@
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+palvelin-->selain: palauttaa html:n
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin-->selain: palauttaa css:n
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+palvelin-->selain: palauttaa js:n
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin-->selain: palauttaa json:in
+selain->palvelin: HTTP POST new_note_spa
+palvelin-->selain: Palvelin palauttaa statuskoodin 201 eli created
+note over selain: koko sivua ei ladata uudelleen sillä se estetään koodissa,\nmutta javascriptin avulla uusi muistiinpano \npäivitetään lennosta näkymäänvulla uusi muistiinpano \npäivitetään lennosta näkymäänn koodissa, mutta javascriptin avulla uusi muistiinpano päivitetään lennosta näkymään
